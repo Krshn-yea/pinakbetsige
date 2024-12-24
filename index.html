@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #e6ccff;
+      color: #4b0082;
+    }
+
+    #container {
+      display: none;
+      padding: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    #container.active {
+      display: block;
+    }
+
+    .button {
+      margin: 20px;
+      padding: 10px 20px;
+      background-color: #6a0dad;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #4b0082;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    #finalSlide {
+      background-color: #f5f5dc;
+      text-align: center;
+      padding: 20px;
+    }
+
+    audio {
+      display: none;
+    }
+
+    .flower-background img {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="slides">
+    <div id="slide1" class="container active">
+      <h1>So ano 'to sa tingin mo?</h1>
+      <button class="button" onclick="nextSlide(2)"> 'touch me gently'</button>
+    </div>
+    <div id="slide2" class="container">
+      <h1>kala mo ba christmas message ko 'to? paano kung hindi?</h1>
+      <button class="button" onclick="nextSlide(3)">'Click this, bub'</button>
+    </div>
+    <div id="slide3" class="container">
+      <h1>paano kung cofession na 'to? may chance ba ako sa'yo?</h1>
+      <button class="button" onclick="nextSlide(4)">Sundutin mo 'ko'!</button>
+    </div>
+    <div id="slide4" class="container">
+      <h1>joke lang bwahahahaha</h1>
+      <button class="button" onclick="nextSlide(5)">'Hmmm, sagad mo'</button>
+    </div>
+    <div id="slide5" class="container">
+      <h1>MERRYYY MERRYY CHRISTMAS TO YOU, BUBB!!!</h1>
+      <button class="button" onclick="nextSlide(6)">'sana gumana 'ung code'</button>
+    </div>
+    <div id="slide6" class="container">
+      <h1>you are lucky to have me on christmas, sana alam mo, jk.
+        Thank you for being such a remarkable presence in my life.</h1>
+      <p>I am truly grateful for the way you consistently show up with kindness, warmth, and understanding. Your ability to listen and offer support, even when I may not fully express myself, is something I deeply cherish. There are countless moments where your words have helped ease my burdens, your presence has brightened my days, and just being you has filled the space around me with a sense of peace that I can never take for granted. (angas mo naman) I am deeply thankful for your unwavering support and encouragement, especially during times when I may have felt uncertain or lost. You have a unique way of reminding me of my worth, of seeing me as I am and as I can be. NAPAKA SERYOSO NAMAN</h1>
+        <button class="button" onclick="nextSlide(7)">'Do the thing'</button>
+    </div>
+    <div id="slide7" class="container">
+      <h1>It’s something so few are able to do, and it makes me feel truly seen and understood. You’ve inspired me to believe in myself more, to push forward even when challenges seem insurmountable, and to trust that the journey I’m on is one worth pursuing, all because of the way you make me feel valued. In every little thing you do, you fill my life with a sense of belonging, of peace, and of contentment. I feel, in your presence, a sense of completeness, as though I’m right where I need to be. It’s rare to find someone whose existence has such a positive, ripple effect on another person’s life, but you manage to do that every day, whether you realize it or not. Remember that in your own moments of doubt, in times when the world feels heavy, you are more than enough. You bring so much light and beauty into this world, and your impact extends far beyond what you may see. There is no measure for the kindness, strength, and love you possess, and it’s something I admire deeply.</h1>
+      <button class="button" onclick="nextSlide(8)">'pag pinindot mo, utot ka'</button>
+    </div>
+    <div id="slide8" class="container">
+      <h1>You are, in every sense of the word, enough. You are worthy of all the love and care you give to others, and I hope you take a moment each day to reflect on the incredible person you are. The way you make others feel valued, the way you give your time, your attention, and your heart without hesitation—it’s a gift that few possess, and one that the world is better for having. In you, I see endless potential, not just for success or achievement, but for the kind of quiet strength and peace that can change the world in subtle, yet profound ways. Your ability to inspire, to lift others, and to lead with empathy and grace is a rare and precious quality that I am so grateful to witness. You’ve got this unique way of balancing fun and depth, and it makes every moment spent with you feel like it’s building something real and lasting.</h1>
+      <button class="button" onclick="nextSlide(9)">'Zap!</button>
+    </div>
+    <div id="slide9" class="container">
+      <h1>Now, as for all that sweetness and charm, I'm not blind to it—you know you’ve got me hooked, right? It's like I can’t stop smiling every time I see your name pop up on my screen. And I’m not even mad about it. Honestly, I kind of love it. You’ve got this playful yet serious side that, honestly, I can’t resist. You say one thing that’s all sweet and thoughtful, and then in the next breath, you toss out something witty or flirtatious that leaves me wondering if you know exactly what you're doing to me. Thank you, truly, for being who you are, for making the world brighter, for reminding me of the good that still exists, and for showing me what it truly means to be present, to be whole, and to be loved. I look forward to our conversations more than I probably should. It's like I can't help but feel a little giddy, a little caught up in the excitement of just in spirit or through a message.</h1>
+      <style>
+        body,
+        div {
+          display: grid;
+        }
+
+        body {
+          place-content: center;
+          overflow-x: hidden;
+          margin: 0;
+          height: 100vh;
+          perspective: 35em;
+          background: #000014;
+        }
+
+        div {
+          transform-style: preserve-3d;
+        }
+
+        .a3d {
+          --m: calc(.5*(var(--n-stars) - 1));
+          --t: calc(0.33333*var(--n-stars)*0.1s);
+          animation: roty 12s linear var(--t) infinite reverse;
+        }
+
+        @keyframes roty {
+          to {
+            rotate: y 1turn;
+          }
+        }
+
+        .🌟 {
+          --q: Min(1, var(--j));
+          --p: calc(1 - var(--q));
+          --s: calc((1.25*var(--p) + var(--q)*var(--sf))*2em);
+          --ay0: calc(var(--i)/var(--n-arms)*1turn);
+          --ay1: calc(var(--ay0) - var(--n-loops)*1turn);
+          --ay: calc((var(--j)/var(--n-stars)*var(--n-loops) + var(--i)/var(--n-arms))*1turn);
+          --tx: calc(var(--q)*var(--rox)*2em);
+          --ty0: calc(var(--m)/var(--n-stars)*20em);
+          --ty1: calc(-1*var(--ty0) - 0.75*2em);
+          --ty: calc((var(--j) - var(--m))/var(--n-stars)*20em + (var(--q)*var(--roy) - var(--p)*0.75)*2em);
+          --tz: calc(var(--j)/var(--n-stars)*10em + var(--q)*var(--roz)*2em);
+          grid-area: 1/ 1;
+          width: var(--s);
+          height: var(--s);
+          --pos: rotatey(var(--ay)) translate3d(var(--tx), var(--ty), var(--tz)) rotatey(calc(-1*var(--ay)));
+          transform: var(--pos);
+          --dt: calc(0.33333*(var(--n-stars) - var(--j))*0.1s);
+          animation: grow calc(var(--q)*0.1s) ease-out var(--dt) backwards, move calc(var(--p)*var(--t)) linear;
+        }
+
+        .🌟::after {
+          opacity: calc(var(--p) + var(--q)*var(--j)/var(--n-stars) + .25);
+          background: radial-gradient(#fffacd 10%, rgba(255, 250, 205, 0.2));
+          --points: 50% 0%, 53.53553% 41.46447%, 85.35534% 14.64466%, 58.53553% 46.46447%, 100% 50%, 58.53553% 53.53553%, 85.35534% 85.35534%, 53.53553% 58.53553%, 50% 100%, 46.46447% 58.53553%, 14.64466% 85.35534%, 41.46447% 53.53553%, 0% 50%, 41.46447% 46.46447%, 14.64466% 14.64466%, 46.46447% 41.46447%;
+          -webkit-clip-path: polygon(var(--points));
+          clip-path: polygon(var(--points));
+          animation: roty 12s linear var(--t) infinite, puls calc(var(--p)*.1s) ease-in-out infinite alternate, hue 4s linear var(--dt) infinite;
+          content: "";
+        }
+
+        @keyframes grow {
+          0% {
+            transform: var(--pos) scale(0);
+          }
+        }
+
+        @keyframes move {
+          0% {
+            transform: rotatey(var(--ay0)) translate3d(0, var(--ty0), 10em) rotatey(calc(-1*var(--ay0)));
+          }
+
+          100% {
+            transform: rotatey(var(--ay1)) translate3d(0, var(--ty1), 0) rotatey(calc(-1*var(--ay1)));
+          }
+        }
+
+        @keyframes puls {
+          to {
+            scale: .2;
+            opacity: 0.2;
+          }
+        }
+
+        @keyframes hue {
+          to {
+            filter: hue-rotate(360deg);
+          }
+        }
+      </style>
+      </head>
+
+      <body>
+        <div class="a3d" id="treeContainer">
+          <!-- Dynamically created stars will appear here -->
+        </div>
+
+        <script>
+          // JavaScript to dynamically create stars for the Christmas tree
+          const treeContainer = document.getElementById('treeContainer');
+          // Function to create a single star with dynamic properties
+          function createStar(i, j, nStars, nArms, nLoops) {
+            const star = document.createElement('div');
+            star.classList.add('🌟');
+            star.style.setProperty('--i', i);
+            star.style.setProperty('--j', j);
+            star.style.setProperty('--n-stars', nStars);
+            star.style.setProperty('--n-arms', nArms);
+            star.style.setProperty('--n-loops', nLoops);
+            treeContainer.appendChild(star);
+          }
+          // Function to generate the tree
+          function generateTree(nStars, nArms, nLoops) {
+            const rows = 5; // Number of rows for stars
+            for (let i = 0; i < rows; i++) {
+              for (let j = 0; j < nStars; j++) {
+                createStar(i, j, nStars, nArms, nLoops);
+              }
+            }
+          }
+          // Default tree settings
+          generateTree(10, 5, 4); // You can change these numbers for different effects
+        </script>
+      </body>
+
+</html>
+<button class="button" onclick="nextSlide(10)">Meron pa!</button>
+</div>
+<div id="slide10" class="container">
+  <h1>Thank you so much, bub!! 'Wag na 'wag kang lalayas sa buhay ko, nakiki-usap ako ng maayos bwahahahaha I am always here, okay? God knows how much I care about you, how much space you occupy in my heart. It's almost unfair how effortlessly you’ve managed to settle into my thoughts, into my prayers, and into the quiet moments of my day. You're not just someone I care about; you’re someone I deeply want to see happy, secure, and loved in every way possible.</h1>
+  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NuemhiajR1YTJ5c3pqaDFpeHlwa3I4NzNobzg0bnBhYm42aWFqMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D28t0Rto3daKI/giphy.gif" alt="The Grinch" width="200">
+  <button class="button" onclick="nextSlide(11)">Dutdut!</button>
+</div>
+<div id="slide11" class="container">
+  <h1>So, yes, God knows how deeply I care. He knows how I silently thank Him for you, how I ask Him to keep you safe and happy, and how I find myself hoping that maybe—just maybe—you feel a little bit of the same. Because if I’m being completely honest, caring about you feels like the easiest, most natural thing in the world. And I wouldn’t trade that for anything.
+    And if this all feels a little too much, just know—I mean every single word. You’ve got my care, my attention, and a whole lot of my admiration. And maybe, just maybe, a bit more of my heart than I ever expected to give.
+  </h1>
+  <button class="button" onclick="playMusic()">Click it to bilib it</button>
+</div>
+<div id="slide12" class="container">
+  <h1>
+    I am deeply thankful for your unwavering support and encouragement, especially during times when I may have felt uncertain or lost. You have a unique way of reminding me of my worth, of seeing me as I am and as I can be. It’s something so few are able to do, and it makes me feel truly seen and understood. You’ve inspired me to believe in myself more, to push forward even when challenges seem insurmountable, and to trust that the journey I’m on is one worth pursuing, all because of the way you make me feel valued.
+  </h1>
+  <div class="flower-background">
+    <img src="https://pin.it/47teARfRo" alt="Lavender Flowers" width="300">
+    <img src="https://media.giphy.com/media/qOrqUuBXjxrwcCvH7S/giphy.gif?cid=790b76112hliguhob2yzlohoeui52enk7j7hn0sdirtytutx&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Sunflower" width="300">
+  </div>
+  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NuemhiajR1YTJ5c3pqaDFpeHlwa3I4NzNobzg0bnBhYm42aWFqMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D28t0Rto3daKI/giphy.gif" alt="The Grinch" width="200">
+  <button class="button" onclick="nextSlide(14)">Click to continue</button>
+</div>
+<div id="slide13" class="container">
+  <h1>
+    In every little thing you do, you fill my life with a sense of belonging, of peace, and of contentment. I feel, in your presence, a sense of completeness, as though I’m right where I need to be. It’s rare to find someone whose existence has such a positive, ripple effect on another person’s life, but you manage to do that every day, whether you realize it or not.
+  </h1>
+  <div class="flower-background">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjVmZ3ZoOG12ZGZjZDE0MzBhcGRwMXg2NnB6aTN5ZTc3eTB1OTlkcCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/r49zgiCebaE0yd6UNn/giphy.gif" alt="Lavender Flowers" width="300">
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NuemhiajR1YTJ5c3pqaDFpeHlwa3I4NzNobzg0bnBhYm42aWFqMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D28t0Rto3daKI/giphy.gif" alt="The Grinch" width="200">
+    <button class="button" onclick="nextSlide(14)">Click to continue</button>
+  </div>
+  <div id="slide14" class="container">
+    <h1>
+      Remember that in your own moments of doubt, in times when the world feels heavy, you are more than enough. You bring so much light and beauty into this world, and your impact extends far beyond what you may see. There is no measure for the kindness, strength, and love you possess, and it’s something I admire deeply.
+    </h1>
+    <div class="flower-background">
+      <img src="https://media.giphy.com/media/IrbbGzQCfCt1DTGnMc/giphy.gif?cid=ecf05e479t17puzobcju59kxgj2cnesstkwyj2u4pxq0mrfr&ep=v1_gifs_related&rid=giphy.gif&ct=g" alt="Lavender Flowers" width="300">
+      <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NuemhiajR1YTJ5c3pqaDFpeHlwa3I4NzNobzg0bnBhYm42aWFqMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D28t0Rto3daKI/giphy.gif" width="200">
+      <button class="button" onclick="nextSlide(15)">Click to continue</button>
+    </div>
+    <div id="slide15" class="container">
+      <h1>
+        You are, in every sense of the word, enough. You are worthy of all the love and care you give to others, and I hope you take a moment each day to reflect on the incredible person you are. The way you make others feel valued, the way you give your time, your attention, and your heart without hesitation—it’s a gift that few possess, and one that the world is better for having.
+      </h1>
+      <div class="flower-background">
+        <img src="https://media.giphy.com/media/12XsHmJxR5c8QU/giphy.gif?cid=790b7611rum9gcc6ab58zggk60j6imefc4a0x8p4tdoe2g6y&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Lavender Flowers" width="300">
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NuemhiajR1YTJ5c3pqaDFpeHlwa3I4NzNobzg0bnBhYm42aWFqMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D28t0Rto3daKI/giphy.gif" alt="The Grinch" width="200">
+        <button class="button" onclick="nextSlide(16)">Shake that ass for me</button>
+      </div>
+      <div id="slide16" class="container">
+        <h1>
+          In you, I see endless potential, not just for success or achievement, but for the kind of quiet strength and peace that can change the world in subtle, yet profound ways. Your ability to inspire, to lift others, and to lead with empathy and grace is a rare and precious quality that I am so grateful to witness.
+        </h1>
+        <div class="flower-background">
+          <img src="https://media.giphy.com/media/OejzWznlNVdvzzIOVe/giphy.gif?cid=790b7611n9zxiyrpfeuxb22yuz8lcbjlqmnd3x1c12hzguod&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Lavender Flowers" width="300">
+          <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NuemhiajR1YTJ5c3pqaDFpeHlwa3I4NzNobzg0bnBhYm42aWFqMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D28t0Rto3daKI/giphy.gif" alt="The Grinch" width="200">
+          <button class="button" onclick="nextSlide(17)">daddy gang</button>
+        </div>
+        <div id="slide17" class="container">
+          <h1>
+            You’ve got this unique way of balancing fun and depth, and it makes every moment spent with you feel like it’s building something real and lasting.
+          </h1>
+          <div class="flower-background">
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnI1cHB4NXpqNHUwb3BjYWUzbDE3YnlveXZmMHRiY2JieWR3djBhYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/69FmYZBku9m81vhGH3/giphy.gif" alt="Lavender Flowers" width="300">
+            <img src="https://media.giphy.com/media/M4cFbuylj8olUdDGkr/giphy.gif?cid=ecf05e47hej4p2t1ytbi4o393zkq44m24wwpkzbjxs1l71wr&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Sunflower" width="300">
+          </div>
+          <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NuemhiajR1YTJ5c3pqaDFpeHlwa3I4NzNobzg0bnBhYm42aWFqMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D28t0Rto3daKI/giphy.gif" alt="The Grinch" width="200">
+          <button class="button" onclick="nextSlide(18)">Click for a surprise</button>
+        </div>
+        <div id="slide18" class="container">
+          <h1>
+            Now, as for all that sweetness and charm, I'm not blind to it—you know you’ve got me hooked, right? It's like I can’t stop smiling every time I see your name pop up on my screen. And I’m not even mad about it. Honestly, I kind of love it. You’ve got this playful yet serious side that, honestly, I can’t resist. You say one thing that’s all sweet and thoughtful, and then in the next breath, you toss out something witty or flirtatious that leaves me wondering if you know exactly what you're doing to me.
+          </h1>
+          <div class="flower-background">
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NuemhiajR1YTJ5c3pqaDFpeHlwa3I4NzNobzg0bnBhYm42aWFqMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D28t0Rto3daKI/giphy.gif" alt="The Grinch" width="200">
+            <button class="button" onclick="nextSlide(19)">What’s next?</button>
+          </div>
+          <div id="slide19" class="container">
+            <h1>
+              Thank you, truly, for being who you are, for making the world brighter, for reminding me of the good that still exists, and for showing me what it truly means to be present, to be whole, and to be loved.
+            </h1>
+            <div class="flower-background">
+              <img src="https://media.giphy.com/media/2kS9kWWNokd2v0XWN2/giphy.gif?cid=790b7611un6y0rhfdl9r4hn7q0xxpxiccy9aantc73wlq4vd&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Lavender Flowers" width="300">
+            </div>
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NuemhiajR1YTJ5c3pqaDFpeHlwa3I4NzNobzg0bnBhYm42aWFqMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D28t0Rto3daKI/giphy.gif" alt="The Grinch" width="200">
+            <button class="button" onclick="nextSlide(11)">Click for more</button>
+          </div>
+          <div id="slide20" class="container">
+            <h1>
+              I look forward to our conversations more than I probably should. It's like I can't help but feel a little giddy, a little caught up in the excitement of just in spirit or through a message.
+            </h1>
+            <div class="flower-background">
+              <img src="https://pin.it/2PlhjeiEB" alt="Lavender Flowers" width="300">
+              <img src="https://pin.it/9mAP6qw1O" alt="Sunflower" width="300">
+            </div>
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NuemhiajR1YTJ5c3pqaDFpeHlwa3I4NzNobzg0bnBhYm42aWFqMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D28t0Rto3daKI/giphy.gif" alt="The Grinch" width="200">
+            <button class="button" onclick="nextSlide(11)">Click for more</button>
+          </div>
+          <div id="slide21" class="container">
+            <h1>
+              Thank you so much, bub!!
+            </h1>
+            <img src="https://media.giphy.com/media/u9l66mWbJv8dnGMQuD/giphy.gif?cid=790b7611oioikxw1ecvjr9dje8abutbtgf1kidchxhhr3hk3&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Fireworks" width="300">
+            <img src="https://media.giphy.com/media/4o5zDUkojvAdi/giphy.gif?cid=ecf05e47tmojwwarolsaf77k92ss8wsksjp4i3rm1a62mvdf&ep=v1_gifs_related&rid=giphy.gif&ct=g" alt="The Grinch" width="200">
+            <button class="button" onclick="alert('End of the message! Merry Christmas!')">The End</button>
+          </div>
